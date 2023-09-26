@@ -1,4 +1,5 @@
 import { Popover, Disclosure } from "@headlessui/react";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 
 export default function More() {
@@ -33,12 +34,20 @@ export default function More() {
           </div>
           <div className="pr-3.5 text-xl font-bold">Para kazanma</div>
         </button>
+
+          <div className="w-[89%] h-px mx-auto my-0.5 bg-[#2f3336]"/>
+
         <Disclosure>
+        {({open}) => (
+          <>
           <Disclosure.Button className="h-[52px] flex justify-between w-full items-center px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
             İçerik Üreticisi Stüdyosu
-            <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+            <svg className={classNames("transition-all", {
+              "rotate-[-180deg]": open
+            })} viewBox="0 0 24 24" width={18.75} height={18.75}>
               <path
-                fill="#fff"
+              
+                fill={open ? "#1d9bf0" : "#fff"}
                 d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
               />
             </svg>
@@ -50,31 +59,43 @@ export default function More() {
             İstatistikler
             </Link>
           </Disclosure.Panel>
+        </>
+        )}
         </Disclosure>
         <Disclosure>
-          <Disclosure.Button className="h-[52px] flex justify-between w-full items-center px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
+          {({open}) => (
+            <>
+            <Disclosure.Button className="h-[52px] flex justify-between w-full items-center px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
             Profesyonel Araçlar
-            <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+            <svg className={classNames("transition-all", {
+              "rotate-[-180deg]": open
+            })}  viewBox="0 0 24 24" width={18.75} height={18.75}>
               <path
-                fill="#fff"
+                fill={open ? "#1d9bf0" : "#fff"}
                 d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
               />
             </svg>
           </Disclosure.Button>
           <Disclosure.Panel className="text-[#e7e9ea] hover:bg-[#eff3f41a]">
           <Link to="/" className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium">
-          <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+          <svg  viewBox="0 0 24 24" width={18.75} height={18.75}>
             <path fill="#fff" d="M 1.996 5.5 c 0 -1.38 1.119 -2.5 2.5 -2.5 h 15 c 1.38 0 2.5 1.12 2.5 2.5 v 13 c 0 1.38 -1.12 2.5 -2.5 2.5 h -15 c -1.381 0 -2.5 -1.12 -2.5 -2.5 v -13 Z m 2.5 -0.5 c -0.277 0 -0.5 0.22 -0.5 0.5 v 13 c 0 0.28 0.223 0.5 0.5 0.5 h 15 c 0.276 0 0.5 -0.22 0.5 -0.5 v -13 c 0 -0.28 -0.224 -0.5 -0.5 -0.5 h -15 Z m 8.085 5 H 8.996 V 8 h 7 v 7 h -2 v -3.59 l -5.293 5.3 l -1.415 -1.42 L 12.581 10 Z"/></svg>
             Reklamlar
             </Link>
           </Disclosure.Panel>
+            </>
+          )}
         </Disclosure>
         <Disclosure>
-          <Disclosure.Button className="h-[52px] flex justify-between w-full items-center px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
+          {({open}) => (
+            <>
+            <Disclosure.Button className="h-[52px] flex justify-between w-full items-center px-4 font-bold hover:bg-[#eff3f41a] transition-colors">
             Ayarlar ve Destek
-            <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+            <svg className={classNames("transition-all", {
+              "rotate-[-180deg]": open
+            })} viewBox="0 0 24 24" width={18.75} height={18.75}>
               <path
-                fill="#fff"
+                fill={open ? "#1d9bf0" : "#fff"}
                 d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"
               />
             </svg>
@@ -107,6 +128,8 @@ export default function More() {
             Klavye kısayolları
             </Link>
           </Disclosure.Panel>
+            </>
+          )}
         </Disclosure>
       </Popover.Panel>
     </Popover>
