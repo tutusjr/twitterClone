@@ -5,7 +5,6 @@ import More from "./more";
 import NewTweet from "./new/index"
 
 export default function Menu() {
-
   
   return (
     <nav className="mt-0.5 mb-1">
