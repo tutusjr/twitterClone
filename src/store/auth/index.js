@@ -8,6 +8,18 @@ const initialState = {
         avatar: 'https://pbs.twimg.com/profile_images/1145673666249809921/Gps3Z3Cj_400x400.jpg'
     }, //o anki aktif olunan account
     accounts:[
+        {
+        id: 1,
+        username:'tutusbey_',
+        fullname:'MustafaTutus',
+        avatar: 'https://pbs.twimg.com/profile_images/1145673666249809921/Gps3Z3Cj_400x400.jpg'
+    },
+        {
+        id: 2,
+        username:'tutusbey_2',
+        fullname:'Mustafa Tutus',
+        avatar: 'https://pbs.twimg.com/profile_images/1145673666249809921/Gps3Z3Cj_400x400.jpg'
+    },
     ]
 }
 
