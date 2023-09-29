@@ -3,13 +3,16 @@ import classNames from "classnames";
 import { mainManu } from "../../../../utils/consts";
 import More from "./more";
 import NewTweet from "./new/index"
+import { useAccount } from "../../../../store/auth/hooks";
 
 export default function Menu() {
+
+  const account = useAccount()
   
   return (
-    <nav className="mt-0.5 mb-1">
+    <nav className="mt-0.5 mb-1" key={account}>
       {mainManu.map((menu, index) => (
-        <NavLink to={menu.path} key={index} className="py-1 block group">
+        <NavLink to={typeof menu.path == 'function' ? menu.path() : menu.path } key={index} className="py-1 block group">
         {({ isActive }) => (
           <div
             className={classNames(

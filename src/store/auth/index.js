@@ -37,7 +37,7 @@ const auth = createSlice ({
             }
         },
         _setCurrentAccount: (state, action) => {
-            state.currentAccount = action.paylaod
+            state.currentAccount = action.payload
         }
       
     }
