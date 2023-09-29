@@ -18,7 +18,7 @@ const initialState = {
         id: 2,
         username:'tutusbey_2',
         fullname:'Mustafa Tutus',
-        avatar: 'https://pbs.twimg.com/profile_images/1145673666249809921/Gps3Z3Cj_400x400.jpg'
+        avatar: 'https://pbs.twimg.com/profile_images/1638668730732277766/FvKwLm6Q_400x400.jpg'
     },
     ]
 }
