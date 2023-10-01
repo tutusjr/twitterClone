@@ -2,7 +2,8 @@ import classNames from "classnames";
 import { useAccount, useAccounts } from "../../../../../store/auth/hooks";
 import { setCurrentAccount } from "../../../../../store/auth/actions";
 
-export default function More({ close }) {
+// eslint-disable-next-line react/prop-types
+export default function More({close}) {
   const currentAccount = useAccount();
   const accounts = useAccounts();
 
