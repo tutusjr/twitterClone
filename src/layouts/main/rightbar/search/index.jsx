@@ -1,15 +1,28 @@
+import { useRef } from "react";
 import { useState } from "react";
+import { useClickAway } from "react-use";
 
 export default function Search() {
   const [query, setQuery] = useState("");
+  const [focus, setFocus] = useState(false);
+
+  const ref = useRef();
+
+  useClickAway(ref, () => {
+    setFocus(false)
+  });
+
   return (
-    <div className="min-h-[32px] h-[53px] mb-3 flex items-center">
+    <div
+      className="min-h-[32px] h-[53px] mb-3 flex items-center relative"
+      ref={ref}
+    >
       <label className=" group h-[43px] rounded-full bg-[#202327] border border-transparent relative w-full focus-within:bg-black focus-within:border-[#1d9bf0] cursor-text label">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0">
           <svg
             viewBox="0 0 24 24"
             height={18.75}
-            className="text-[#71767b] min-w-[32px] absolute"
+            className="text-[#71767b] min-w-[32px] absolute group-focus-within:text-[#1d9bf0] cursor-default"
           >
             <path
               fill="currentColor"
@@ -20,19 +33,33 @@ export default function Search() {
         <input
           type="text"
           value={query}
-          onChange={e => setQuery(e.target.value)}
+          onChange={(e) => setQuery(e.target.value)}
+          onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(false)}
           className="w-full h-full bg-transparent outline-none rounded-full pl-[56px] text-[15px]"
         />
-        {query && (
-          <button className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] right-3 absolute top-1/2 -translate-y-1/2">
+        {query && focus && (
+          <button
+            type="button"
+            onClick={() => setQuery("")}
+            className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] right-3 absolute top-1/2 -translate-y-1/2 invisible group-focus-within:visible"
+          >
             <svg viewBox="0 0 15 15" width={10} height={10}>
-              <path 
-              fill="currentColor"
-              d="M6.09 7.5L.04 1.46 1.46.04 7.5 6.09 13.54.04l1.42 1.42L8.91 7.5l6.05 6.04-1.42 1.42L7.5 8.91l-6.04 6.05-1.42-1.42L6.09 7.5z" />
+              <path
+                fill="currentColor"
+                d="M6.09 7.5L.04 1.46 1.46.04 7.5 6.09 13.54.04l1.42 1.42L8.91 7.5l6.05 6.04-1.42 1.42L7.5 8.91l-6.04 6.05-1.42-1.42L6.09 7.5z"
+              />
             </svg>
           </button>
         )}
       </label>
+      {focus && (
+        <div className="absolute w-[350px] top-full -translate-y-1 rounded-lg bg-black shadow-box max-h-[calc(80vh - 53px)] text-center min-h-[100px]">
+          <p className="py-3 pb-8 text-[#71767b] leading-5 w-full">
+            Kişileri, listeleri veya anahtar kelimeleri aramayı dene
+          </p>
+        </div>
+      )}
     </div>
   );
 }
