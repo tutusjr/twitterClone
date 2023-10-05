@@ -12,7 +12,7 @@ export default function Menu() {
   return (
     <nav className="mt-0.5 mb-1" key={account}>
       {mainManu.map((menu, index) => (
-        <NavLink to={typeof menu.path == 'function' ? menu.path() : menu.path } key={index} className="py-1 block group">
+        <NavLink to={typeof menu.path == 'function' ? menu.path() : menu.path } key={index} className="block group">
         {({ isActive }) => (
           <div
             className={classNames(

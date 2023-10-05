@@ -32,10 +32,11 @@ export default function Search() {
         </div>
         <input
           type="text"
+          placeholder="Ara"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocus(true)}
-          className="w-full h-full bg-transparent outline-none rounded-full pl-[56px] text-[15px]"
+          className="w-full h-full placeholder-[#71767b] bg-transparent outline-none rounded-full pl-[56px] text-[15px]"
         />
         {(query && focus) && (
           <button
