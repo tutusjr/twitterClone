@@ -1,5 +1,5 @@
-import Premium from "../../../components/premium";
-import Topics from "../../../components/topics";
+import Premium from "./premium"
+import Topics from "./topics"
 import Search from "./search";
 
 export default function RightBar() {

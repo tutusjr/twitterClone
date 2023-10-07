@@ -13,9 +13,9 @@ export default function Search() {
   });
 
   return (
-    <div
+      <div
     ref={ref}
-    className="min-h-[32px] h-[53px] mb-3 flex items-center relative"
+    className="min-h-[32px] h-[53px] mb-3 flex items-center bg-black sticky top-0 z-10"
     >
       <label className=" group h-[43px] rounded-full bg-[#202327] border border-transparent relative w-full focus-within:bg-black focus-within:border-[#1d9bf0] cursor-text label">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0">

@@ -1,5 +1,5 @@
 import Topic from "./topic";
-import { topics } from "../../utils/consts";
+import { topics } from "../../../../utils/consts";
 
 export default function Topics() {
     return (

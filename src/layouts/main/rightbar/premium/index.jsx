@@ -1,4 +1,4 @@
-import Button from '../button'
+import Button from '../../../../components/button'
 /* eslint-disable react/no-unescaped-entities */
 export default function Premium () {
     return(

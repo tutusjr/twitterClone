@@ -100,5 +100,65 @@ export const topics = [
             value:'Starlink'
         },
         postCount:12666
-    }
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'tag',
+            value:'mustafatutus'
+        }
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'query',
+            value:'Starlink'
+        },
+        postCount:12666
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'tag',
+            value:'mustafatutus'
+        }
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'query',
+            value:'Starlink'
+        },
+        postCount:12666
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'tag',
+            value:'mustafatutus'
+        }
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'query',
+            value:'Starlink'
+        },
+        postCount:12666
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'tag',
+            value:'mustafatutus'
+        }
+    },
+    {
+        title:'Türkiye tarihinde gündemde',
+        topic:{
+            type:'query',
+            value:'Starlink'
+        },
+        postCount:12666
+    },
 ]
