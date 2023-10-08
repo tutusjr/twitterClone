@@ -4,7 +4,6 @@ import More from "./more";
 
 export default function Account() {
   const account = useAccount();
-  console.log(account);
   return (
     <div className="mt-auto ">
       <Popover className="relative">
