@@ -13,9 +13,8 @@ const modal = createSlice ({
         },
         _removeModal: state => {
             state.modal = false
-            }
         }
-    })
+    }})
 
 export const {_setModal, _removeModal} = modal.actions
 export default modal.reducer
