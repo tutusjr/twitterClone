@@ -18,7 +18,7 @@ export default function UserCard({user }) {
             alt="userAvatar"
           />
           <div className="flex-1 flex flex-col text-left">
-            <div className="text-[15px] text[#e7e9ea] leading-5 w-fit font-bold hover:underline flex justify-center items-center">
+            <div className="text-[15px] text-[color:var(--color-base)] leading-5 w-fit font-bold hover:underline flex justify-center items-center">
               {user.fullName}
               {user?.verified && (
                 <svg viewBox="0 0 22 22" width={18.75} height={18.75} className="text-[#1d9bf0] ml-0.5">

@@ -29,7 +29,7 @@ export default function AppreanceModal() {
                     @X · 31d
                   </div>
               </header>
-              <div className="text-[#e7e9ea] leading-5 text-[15px]">
+              <div className="text-[color:var(--color-base)] leading-5 text-[15px]">
               X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler, etiketler ve <Link className="text-[#1d9bf0]" to="/x">@X</Link> gibi bahsetmeler içerebilir.
               </div>
             </div>

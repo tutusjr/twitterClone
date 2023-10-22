@@ -51,17 +51,17 @@ export default function Footer() {
               />
             </svg>
           </Popover.Button>
-          <Popover.Panel className="w-[150px] grid absolute bottom-0 right-0 max-w-[384px] bg-black shadow-box rounded-xl overflow-hidden">
-            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[#16181c] leading-5 font-bold">
+          <Popover.Panel className="w-[150px] grid absolute bottom-0 right-0 max-w-[384px] bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden">
+            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[color:var(--background-secondary)] leading-5 font-bold">
               Hakkında
             </Link>
-            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[#16181c] leading-5 font-bold">
+            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[color:var(--background-secondary)] leading-5 font-bold">
               Durum
             </Link>
-            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[#16181c] leading-5 font-bold">
+            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[color:var(--background-secondary)] leading-5 font-bold">
               İşletmeler İçin X
             </Link>
-            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[#16181c] leading-5 font-bold">
+            <Link className="py-3 px-4 text-white text-[15px] hover:bg-[color:var(--background-secondary)] leading-5 font-bold">
               Geliştiriciler
             </Link>
           </Popover.Panel>
