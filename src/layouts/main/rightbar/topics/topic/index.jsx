@@ -12,19 +12,19 @@ export default function Topic({ item }) {
       }}
       className="py-3 px-4 hover:bg-white/[0.03] transition-colors relative"
     >
-      <div className="text-[13px] text-[#71767b] leading-4">{item.title}</div>
-      <div className="text-[15px] leading-5 font-bold mt-0.5 text-[color:var(--color-base)]">
+      <div className="text-[13px] text-[color:var(--color-base-secondary)] leading-4">{item.title}</div>
+      <div className="text-[15px] leading-5 font-bold mt-0.5">
         {item.topic.type === "tag" && "#"}
         {item.topic.value}
       </div>
       {item.postCount && (
-        <div className="text-[13px] text-[#71767b] leading-4 mt-1">
+        <div className="text-[13px] text-[color:var(--color-base-secondary)] leading-4 mt-1">
           {numberFormat(item.postCount)} posts
         </div>
       )}
       <Popover className="absolute top-0 right-2 h-10">
-        <Popover.Button className="h-[34.75px] outline-none w-[34.75px] absolute top-1.5 transition-colors right-2 flex items-center justify-center text-[#71767b] hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] rounded-full">
-          <svg viewBox="0 0 24 24" width={18.75} className="text-[color:var(--color-base)]">
+        <Popover.Button className="h-[34.75px] outline-none w-[34.75px] absolute top-1.5 transition-colors right-2 flex items-center justify-center text-[color:var(--color-base-secondary)] hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] rounded-full">
+          <svg viewBox="0 0 24 24" width={18.75}>
             <path
               fill="currentColor"
               d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
@@ -33,7 +33,7 @@ export default function Topic({ item }) {
         </Popover.Button>
         <Popover.Panel
           className="bg-[color:var(--background-primary)] w-[384px] absolute top-2 right-0 grid rounded-lg shadow-box z-[1]
-          overflow-hidden text-[color:var(--color-base)]"
+          overflow-hidden"
         >
           <button
             type="button"

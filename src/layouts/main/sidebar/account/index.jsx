@@ -16,12 +16,12 @@ export default function Account() {
 
           <div className=" mx-3 text-[15px] text-left">
             <h6 className="font-bold">{account?.fullname}</h6>
-            <div className="text-[#71767b]">@{account?.username}</div>
+            <div className="text-[color:var(--color-base-secondary)]">@{account?.username}</div>
           </div>
 
           <svg className="ml-auto" viewBox="0 0 24 24" width={18.75}>
             <path
-              fill="#fff"
+              fill="currentColor"
               d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
             />
           </svg>
@@ -34,7 +34,7 @@ export default function Account() {
           leaveFrom="transform opacity-100"
           leaveTo="transform opacity-0"
         >
-          <Popover.Panel className="absolute py-3 bottom-[90px] w-[300px] left-1/2 -translate-x-1/2 shadow-box bg-black rounded-2xl overflow-hidden">
+          <Popover.Panel className="absolute py-3 bottom-[90px] w-[300px] left-1/2 -translate-x-1/2 shadow-box bg-[color:var(--background-primary)] rounded-2xl overflow-hidden">
             {({ close }) => <More close={close} />}
           </Popover.Panel>
         </Transition>

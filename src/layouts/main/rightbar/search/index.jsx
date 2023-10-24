@@ -17,12 +17,12 @@ export default function Search() {
     ref={ref}
     className="min-h-[32px] h-[53px] mb-3 flex items-center bg-[color:var(--background-primary)] sticky top-0 z-10"
     >
-      <label className=" group h-[43px] rounded-full bg-[color:var(--background-third)] border border-transparent relative w-full focus-within:bg-black focus-within:border-[#1d9bf0] cursor-text label">
+      <label className=" group h-[43px] rounded-full bg-[color:var(--background-third)] border border-transparent relative w-full focus-within:bg-[color:var(--background-primary)] focus-within:border-[#1d9bf0] cursor-text label">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0">
           <svg
             viewBox="0 0 24 24"
             height={18.75}
-            className="text-[#71767b] min-w-[32px] absolute group-focus-within:text-[#1d9bf0] cursor-default"
+            className="text-[color:var(--color-base-secondary)] min-w-[32px] absolute group-focus-within:text-[color:var(--color-primary)] cursor-default"
           >
             <path
               fill="currentColor"
@@ -36,13 +36,13 @@ export default function Search() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocus(true)}
-          className="w-full h-full placeholder-[#71767b] bg-transparent outline-none rounded-full pl-[56px] text-[15px]"
+          className="w-full h-full bg-transparent outline-none rounded-full pl-[56px] text-[15px]"
         />
         {(query && focus) && (
           <button
             type="button"
             onClick={() => setQuery("")}
-            className="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] right-3 absolute top-1/2 -translate-y-1/2 invisible group-focus-within:visible"
+            className="w-[22px] h-[22px] rounded-full bg-[color:var(--color-primary)] flex items-center justify-center text-black min-w-[22px] right-3 absolute top-1/2 -translate-y-1/2 invisible group-focus-within:visible"
           >
             <svg viewBox="0 0 15 15" width={10} height={10}>
               <path
@@ -54,8 +54,8 @@ export default function Search() {
         )}
       </label>
       {focus && (
-        <div className="absolute w-[350px] top-full -translate-y-1 rounded-lg bg-black shadow-box max-h-[calc(80vh - 53px)] text-center min-h-[100px]">
-          <p className="py-3 pb-8 text-[#71767b] leading-5 w-full">
+        <div className="absolute w-[350px] top-full -translate-y-1 rounded-lg bg-[color:var(--background-primary)] shadow-box max-h-[calc(80vh - 53px)] text-center min-h-[100px]">
+          <p className="py-3 pb-8 text-[color:var(--color-base-secondary)] leading-5 w-full">
             Kişileri, listeleri veya anahtar kelimeleri aramayı dene
           </p>
         </div>

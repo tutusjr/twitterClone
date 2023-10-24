@@ -16,12 +16,12 @@ export default function Menu() {
         {({ isActive }) => (
           <div
             className={classNames(
-              "p-3 inline-flex transition-colors rounded-full text-[color:var(--color-base)] items-center gap-5 group-hover:bg-[#eff3f41a]",
+              "p-3 inline-flex transition-colors rounded-full items-center gap-5 group-hover:bg-[color:var(--background-third)]",
               {"font-bold": isActive})}>
             
             <div className= "w-[26.25] h-[26.25] relative">
               {menu?.notification && (
-                <span className="absolute -top-1.5 -right-1 text-[11px] h-[18px] w-[18px] rounded-full bg-[color:var(--color-primary)] flex items-center justify-center">{menu.notification}</span>
+                <span className="absolute -top-1.5 -right-1 text-[11px] h-[18px] w-[18px] rounded-full bg-[color:var(--color-primary)] text-[color:var(--background-primary)] border border-[color:var(--background-primary)] flex items-center justify-center">{menu.notification}</span>
               )}
               {!isActive && menu.icon.passive}
               {isActive && menu.icon.active}

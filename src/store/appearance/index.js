@@ -1,18 +1,26 @@
 import  {createSlice} from "@reduxjs/toolkit";
 
 const initialState = {
-    // backgroundColor: {
-    //     primary: "#000",
-    //     secondary:"#16181c",
-    //     third: "#273340"
-    // },
-    // color: {
-    //     primary: "#1d9bf0",
-    //     secondary:"#8ecdf8",
-    //     base : "#e7e9ea"
+    /* KOYU
+    
+    backgroundColor: {
+        primary: "#000",
+        secondary:"#16181c",
+        third: "#273340"
+    },
+    color: {
+        primary: "#1d9bf0",
+        secondary:"#8ecdf8",
+        base : "#e7e9ea"
+        baseSecondary:"#71767b"
 
-    // },
-    // fontSize: 16
+    },
+    boxShadow: 'rgba(255,255,255, 0.2) 0px 0px 15px, rgba(255,255,255, 0.15) 0px 0px 3px 1px',
+    fontSize: 16
+
+    */
+    /* AZ KOYU
+    
     backgroundColor: {
         primary: "#15202b",
         secondary:"#1e2732",
@@ -21,10 +29,26 @@ const initialState = {
     color: {
         primary: "#1d9bf0",
         secondary:"#8ecdf8",
-        base:"red",
-        // base:"#f7f9f9"
-
+        base:"#f7f9f9",
+        baseSecondary:"#8b98a5"
     },
+    boxShadow: 'rgba(255,255,255, 0.2) 0px 0px 15px, rgba(255,255,255, 0.15) 0px 0px 3px 1px',
+    fontSize: 16
+
+    */
+    backgroundColor: {
+        primary: "#fff",
+        secondary:"#f7f9f9",
+        third: "#eff3f4"
+    },
+    color: {
+        primary: "#1d9bf0",
+        secondary:"#8ecdf8",
+        // base:"red",
+        base:"#0f1419",
+        baseSecondary:"#8b98a5"
+    },
+    boxShadow: 'rgba(101,119,134,0.2) 0px 0px 15px,rgba(101,119,134,0.15) 0px 0px 3px 1px',
     fontSize: 16
 }
 
