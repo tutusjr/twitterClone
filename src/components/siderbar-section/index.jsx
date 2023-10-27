@@ -12,7 +12,7 @@ export default function SidebarSection({ title, children, more }) {
       {more && (
         <Link
           to={more}
-          className="rounded-b-2xl h-[52px] flex items-center px-4 text-[15px] text-[#1d9bf0] transition-colors hover:bg-white/[0.05]"
+          className="rounded-b-2xl h-[52px] flex items-center px-4 text-[15px] text-[color:var(--color-primary)] transition-colors hover:bg-white/[0.05]"
         >
           Daha fazla göster
         </Link>

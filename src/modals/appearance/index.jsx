@@ -9,6 +9,7 @@ import {
   setBoxShadow,
   setColor,
 } from "../../store/appearance/actions";
+import { colors } from "../../utils/consts";
 export default function AppreanceModal({ close }) {
   const { backgroundColor, color } = useAppearance();
 
@@ -61,6 +62,53 @@ export default function AppreanceModal({ close }) {
         </div>
 
         <div>
+
+          <div className="grid gap-3">
+          <section>
+          <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
+            Yazı tipi boyutu
+          </h6>
+          <div className="p-4 mb-3 bg-[color:var(--background-secondary)] rounded-2xl flex items-center gap-5">
+            <div className="text-[13px]">Aa</div>
+            <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full"></div>
+            <div className="text-[20px]">aA</div>
+          </div>
+          </section>
+
+          <section>
+          <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
+            Renk
+          </h6>
+          <div className="py-3 mb-3 bg-[color:var(--background-secondary)] rounded-2xl flex justify-around items-center">
+            {colors.map((c) => (
+              <button
+              onClick={() => {
+                setColor({
+                  ...color,
+                  ...c
+                })
+              }}
+                className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+                style={{ "--bg": c.primary }}
+                key={c.id}
+              >
+                {
+                  color.primary === c.primary && (
+                    <svg
+                  viewBox="0 0 24 24"
+                  width={25}
+                >
+                    <path
+                    fill="currentColor" d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"/>
+                </svg>
+                  )
+                }
+              </button>
+            ))}
+          </div>
+          </section>
+
+          <section>
           <h6 className="text-[color:var(--color-base-secondary)] mb-1 leading-5 text-[13px] font-bold">
             Arka plan
           </h6>
@@ -92,20 +140,23 @@ export default function AppreanceModal({ close }) {
               }}
             >
               <div className="w-10 h-10 rounded-full group-hover:bg-black/10 flex-shrink-0 flex items-center justify-center">
-                <div className={classNames("w-5 h-5 border-2 rounded-full border-[#b9cad3] flex items-center justify-center",
-                {
-                  "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white": backgroundColor.name==='light'
-                })}>
-                  {backgroundColor.name === 'light' && (
-                    <svg
-                    viewBox="0 0 24 24"
-                  >
+                <div
+                  className={classNames(
+                    "w-5 h-5 border-2 rounded-full border-[#b9cad3] flex items-center justify-center",
+                    {
+                      "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
+                        backgroundColor.name === "light",
+                    }
+                  )}
+                >
+                  {backgroundColor.name === "light" && (
+                    <svg viewBox="0 0 24 24">
                       <path
-                      fill="currentColor" 
-                      d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"/>
-                  </svg>
-                  )
-                  }
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
                 </div>
               </div>
               Varsayılan
@@ -137,20 +188,23 @@ export default function AppreanceModal({ close }) {
               }}
             >
               <div className="w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
-                <div className={classNames("w-5 h-5 border-2 rounded-full border-[#5c6e7e] flex items-center justify-center",
-                {
-                  "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white": backgroundColor.name==='dark'
-                })}>
-                  {backgroundColor.name === 'dark' && (
-                    <svg
-                    viewBox="0 0 24 24"
-                  >
+                <div
+                  className={classNames(
+                    "w-5 h-5 border-2 rounded-full border-[#5c6e7e] flex items-center justify-center",
+                    {
+                      "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
+                        backgroundColor.name === "dark",
+                    }
+                  )}
+                >
+                  {backgroundColor.name === "dark" && (
+                    <svg viewBox="0 0 24 24">
                       <path
-                      fill="currentColor" 
-                      d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"/>
-                  </svg>
-                  )
-                  }
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
                 </div>
               </div>
               Loş
@@ -182,25 +236,32 @@ export default function AppreanceModal({ close }) {
               }}
             >
               <div className="w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
-                <div className={classNames("w-5 h-5 border-2 rounded-full border-[#3e4144] flex items-center justify-center",
-                {
-                  "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white": backgroundColor.name==='darker'
-                })}>
-                  {backgroundColor.name === 'darker' && (
-                    <svg
-                    viewBox="0 0 24 24"
-                  >
+                <div
+                  className={classNames(
+                    "w-5 h-5 border-2 rounded-full border-[#3e4144] flex items-center justify-center",
+                    {
+                      "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
+                        backgroundColor.name === "darker",
+                    }
+                  )}
+                >
+                  {backgroundColor.name === "darker" && (
+                    <svg viewBox="0 0 24 24">
                       <path
-                      fill="currentColor" 
-                      d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"/>
-                  </svg>
-                  )
-                  }
+                        fill="currentColor"
+                        d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+                      />
+                    </svg>
+                  )}
                 </div>
               </div>
               Işıklar kapalı
             </button>
           </div>
+          </section>
+
+          </div>
+          
         </div>
 
         <div className="flex items-center justify-center">
