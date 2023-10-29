@@ -2,24 +2,36 @@
 import Button from "../../components/button";
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { useAppearance } from "../../store/appearance/hooks";
 import classNames from "classnames";
 import {
   setBackgroundColor,
   setBoxShadow,
   setColor,
+  setFontSize,
 } from "../../store/appearance/actions";
-import { colors } from "../../utils/consts";
+import { colors, fontSizes } from "../../utils/consts";
+import { useEffect } from "react";
 export default function AppreanceModal({ close }) {
-  const { backgroundColor, color } = useAppearance();
+
+  const { backgroundColor, color, fontSize } = useAppearance();
+
+  const [fontSizePercent  , setFontSizePercent] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setFontSizePercent(document.querySelector('.active-font-size').offsetLeft + 3)
+    }, 1);
+  }, [fontSize])
 
   return (
     <div className="w-600px">
-      <h3 className="mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center">
-        Görünümü özelleştir
+      <h3 className="mt-8 mb-3 text-[1.438rem] leading-7 font-extrabold text-center">
+        Görünümünü özelleştir
       </h3>
       <div className="p-8 pt-0.5">
-        <p className="text-center text-[color:var(--color-base-secondary)] text-[15px] leading-5 mb-5">
+        <p className="text-center text-[color:var(--color-base-secondary)] text-[0.938rem] leading-5 mb-5">
           Bu ayarlar, bu tarayicidaki tum X hesaplarini etkiler.
         </p>
         <div className="mx-8 mb-4">
@@ -30,7 +42,7 @@ export default function AppreanceModal({ close }) {
               alt=""
             />
             <div className="flex-1 flex flex-col">
-              <header className="mb-0.5 leading-5 text-[15px] flex items-center">
+              <header className="mb-0.5 leading-5 flex items-center">
                 <div className="leading-5 text-[15px] font-bold flex items-center">
                   X
                   <svg
@@ -48,7 +60,7 @@ export default function AppreanceModal({ close }) {
                   @X · 31d
                 </div>
               </header>
-              <div className="text-[color:var(--color-base)] leading-5 text-[15px]">
+              <div className="text-[color:var(--color-base)] leading-5">
                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar
                 yatar. Gönderiler; fotoğraflar, videolar, bağlantılar, metinler,
                 etiketler ve{" "}
@@ -69,9 +81,29 @@ export default function AppreanceModal({ close }) {
             Yazı tipi boyutu
           </h6>
           <div className="p-4 mb-3 bg-[color:var(--background-secondary)] rounded-2xl flex items-center gap-5">
-            <div className="text-[13px]">Aa</div>
-            <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full"></div>
-            <div className="text-[20px]">aA</div>
+            <div className="text-[0.813rem]">Aa</div>
+            <div className="h-1 bg-[color:var(--color-secondary)] flex-1 rounded-full relative ">
+              <div style={{width: fontSizePercent}} className="absolute h-full top-0 left-0 rounded-full bg-[color:var(--color-primary)]" />
+              <div className="flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]">
+              {fontSizes.map(fs => (
+                <button
+                onClick={(e) => {
+                  setFontSize(fs)
+                  console.log(e.currentTarget.offsetLeft)
+                }} 
+                  key={fs.id} 
+                  className={classNames("before:absolute before:inset-0 before:rounded-full before:hover:bg-[color:var(--color-primary)] before:opacity-10 w-8 h-8 rounded-full flex items-center justify-center relative", {
+                  "active-font-size": fs === fontSize
+                })}>
+                  <div className={classNames("w-3 h-3 rounded-full bg-[color:var(--color-secondary)]", {
+                    "w-4 h-4" : fs === fontSize,
+                    "!bg-[color:var(--color-primary)]": fs <= fontSize
+                  })}/>
+                </button>
+              ))}
+              </div>
+            </div>
+            <div className="text-[1.25rem]">Aa</div>
           </div>
           </section>
 
@@ -88,7 +120,7 @@ export default function AppreanceModal({ close }) {
                   ...c
                 })
               }}
-                className="w-10 h-10 rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
+                className="w-[40px] h-[40px] rounded-full bg-[color:var(--bg)] flex items-center justify-center text-white"
                 style={{ "--bg": c.primary }}
                 key={c.id}
               >
@@ -115,7 +147,7 @@ export default function AppreanceModal({ close }) {
           <div className="py-2 px-4 mb-3 grid grid-cols-3 gap-2 bg-[color:var(--background-secondary)] rounded-2xl">
             <button
               className={classNames(
-                "h-16 pr-3 pl-2 bg-white text-[#0f1419] border-2 font-bold border-white/10 rounded group flex items-center",
+                "h-[62px] pr-3 pl-2 bg-white text-[#0f1419] border-2 font-bold border-white/10 rounded group flex items-center",
                 {
                   "!border-[color:var(--color-primary)]":
                     backgroundColor.name === "light",
@@ -139,10 +171,10 @@ export default function AppreanceModal({ close }) {
                 );
               }}
             >
-              <div className="w-10 h-10 rounded-full group-hover:bg-black/10 flex-shrink-0 flex items-center justify-center">
+              <div className="w-[40px] h-[40px] rounded-full group-hover:bg-black/10 flex-shrink-0 flex items-center justify-center">
                 <div
                   className={classNames(
-                    "w-5 h-5 border-2 rounded-full border-[#b9cad3] flex items-center justify-center",
+                    "w-[20px] h-[20px] border-[2px] rounded-full border-[#b9cad3] flex items-center justify-center",
                     {
                       "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
                         backgroundColor.name === "light",
@@ -159,11 +191,13 @@ export default function AppreanceModal({ close }) {
                   )}
                 </div>
               </div>
-              Varsayılan
+              <div className="text-center w-full">
+                Varsayılan
+              </div>
             </button>
             <button
               className={classNames(
-                "h-16 pr-3 pl-2 bg-[#15202b] text-[#f7f9f9]  border-2 font-bold border-white/10 rounded group flex items-center",
+                "h-[62px] pr-3 pl-2 bg-[#15202b] text-[#f7f9f9]  border-2 font-bold border-white/10 rounded group flex items-center",
                 {
                   "!border-[color:var(--color-primary)]":
                     backgroundColor.name === "dark",
@@ -187,10 +221,10 @@ export default function AppreanceModal({ close }) {
                 );
               }}
             >
-              <div className="w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
+              <div className="w-[40px] h-[40px] rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
                 <div
                   className={classNames(
-                    "w-5 h-5 border-2 rounded-full border-[#5c6e7e] flex items-center justify-center",
+                    "w-[20px] h-[20px] border-[2px] rounded-full border-[#5c6e7e] flex items-center justify-center",
                     {
                       "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
                         backgroundColor.name === "dark",
@@ -207,11 +241,13 @@ export default function AppreanceModal({ close }) {
                   )}
                 </div>
               </div>
-              Loş
+              <div className="text-center w-full">
+                Loş
+              </div>
             </button>
             <button
               className={classNames(
-                "h-16 pr-3 pl-2  bg-black text-[#e7e9ea] border-2 font-bold border-white/10 rounded group flex items-center",
+                "h-[62px] pr-3 pl-2 overflow-hidden bg-black text-[#e7e9ea] border-2 font-bold border-white/10 rounded group flex items-center",
                 {
                   "!border-[color:var(--color-primary)]":
                     backgroundColor.name === "darker",
@@ -235,10 +271,10 @@ export default function AppreanceModal({ close }) {
                 );
               }}
             >
-              <div className="w-10 h-10 rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
+              <div className="w-[40px] h-[40px] rounded-full group-hover:bg-white/5 flex-shrink-0 flex items-center justify-center">
                 <div
                   className={classNames(
-                    "w-5 h-5 border-2 rounded-full border-[#3e4144] flex items-center justify-center",
+                    "w-[20px] h-[20px] border-[2px] rounded-full border-[#3e4144] flex items-center justify-center",
                     {
                       "!border-[color:var(--color-primary)] bg-[color:var(--color-primary)] text-white":
                         backgroundColor.name === "darker",
@@ -255,7 +291,9 @@ export default function AppreanceModal({ close }) {
                   )}
                 </div>
               </div>
-              Işıklar kapalı
+              <div className="text-center w-min overflow-hidden">
+                <p className="min-w-max">Işıklar kapalı</p>
+              </div>
             </button>
           </div>
           </section>

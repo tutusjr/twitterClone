@@ -266,5 +266,13 @@ export const colors = [
   { primary: "#f91880", secondary: "#fc8cc0" },
   { primary: "#7856ff", secondary: "#bcabff" },
   { primary: "#ff7a00", secondary: "#ffbd80" },
-  { priamry: "#00ba7c", secondary: "#80ddbe" },
+  { primary: "#00ba7c", secondary: "#80ddbe" },
 ];
+
+export const fontSizes = [
+  14,
+  15,
+  16,
+  18,
+  19
+]
