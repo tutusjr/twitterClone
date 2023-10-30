@@ -14,12 +14,12 @@ export default function Account() {
             alt="none"
           />
 
-          <div className=" mx-3 text-[15px] text-left">
+          <div className=" mx-3 text-left">
             <h6 className="font-bold">{account?.fullname}</h6>
             <div className="text-[color:var(--color-base-secondary)]">@{account?.username}</div>
           </div>
 
-          <svg className="ml-auto" viewBox="0 0 24 24" width={18.75}>
+          <svg className="ml-auto h-[1.172rem]" viewBox="0 0 24 24">
             <path
               fill="currentColor"
               d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"

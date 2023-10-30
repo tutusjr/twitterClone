@@ -61,7 +61,7 @@ export default function More() {
               <Disclosure.Panel className="hover:bg-[color:var(--background-third)]">
                 <Link
                   to="/"
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -97,7 +97,7 @@ export default function More() {
               <Disclosure.Panel className="hover:bg-[color:var(--background-third)]">
                 <Link
                   to="/"
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -133,7 +133,7 @@ export default function More() {
               <Disclosure.Panel className=" hover:bg-[color:var(--background-third)]">
                 <Link
                   to="/"
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -147,7 +147,7 @@ export default function More() {
               <Disclosure.Panel className=" hover:bg-[color:var(--background-third)]">
                 <Link
                   to="/"
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -161,7 +161,7 @@ export default function More() {
               <Disclosure.Panel className=" hover:bg-[color:var(--background-third)]">
                 <button
                   onClick={() => setModal('appearance')}
-                  className="flex items-center w-full px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center w-full px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -175,7 +175,7 @@ export default function More() {
               <Disclosure.Panel className=" hover:bg-[color:var(--background-third)]">
                 <Link
                   to="/"
-                  className="flex items-center px-3 h-11 gap-3 text-[15px] font-medium"
+                  className="flex items-center px-3 h-11 gap-3 font-medium"
                 >
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path

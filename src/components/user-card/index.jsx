@@ -17,9 +17,11 @@ export default function UserCard({user }) {
             src={user.avatar}
             alt="userAvatar"
           />
-          <div className="flex-1 flex flex-col text-left">
-            <div className="text-[15px] leading-5 w-fit font-bold hover:underline flex justify-center items-center">
+          <div className="flex-1 flex flex-col text-left truncate">
+            <div className="leading-5 w-max font-bold hover:underline flex justify-center items-center">
+              <p className="w-fit ">
               {user.fullName}
+              </p>
               {user?.verified && (
                 <svg viewBox="0 0 22 22" width={18.75} height={18.75} className="text-[#1d9bf0] ml-0.5">
                   <path
@@ -29,14 +31,14 @@ export default function UserCard({user }) {
                 </svg>
               )}
             </div>
-            <div className="text-[15px] w-fit text-[color:var(--color-base-secondary)]">
+            <div className=" w-fit text-[color:var(--color-base-secondary)]">
               @{user.userName}
             </div>
           </div>
-          <div>
+          <div className="relative">
             {following ? (
-                <Button variant="white-outline" size="small" onClick={() => setFollowing(false)} className="whitespace-nowrap group">
-                    <div className="flex group-hover:hidden">Takip ediliyor</div>
+                <Button variant="white-outline" size="small" onClick={() => setFollowing(false)} className="whitespace-nowrap group absolute right-0 bg-[color:var(--background-secondary)]">
+                    <div className="flex flex-1 group-hover:hidden">Takip ediliyor</div>
                     <div className="hidden group-hover:flex">Takibi bırak</div>
                 </Button>
             ):(

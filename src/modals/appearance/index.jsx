@@ -302,7 +302,7 @@ export default function AppreanceModal({ close }) {
           
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center pt-4">
           <Button onClick={close}>Bitti</Button>
         </div>
       </div>
