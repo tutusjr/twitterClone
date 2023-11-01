@@ -1,25 +1,27 @@
+
 import StickyHeader from "../../components/sticky-header";
 import Tab from "../../components/tab";
 
 export default function Home() {
     return(
         <>
-            <StickyHeader title="Anasayfa"/>
-            <Tab>
+            <Tab activeTab="for-you">
+           <StickyHeader title="">
             <Tab.items>
                 <Tab.item id="for-you">
-                    1.tab
+                    Sana özel
                 </Tab.item>
                 <Tab.item id="followings">
-                    2.tab
+                    Takip edilenler
                 </Tab.item>
+            </Tab.items>
+            </StickyHeader>
                 <Tab.content id="for-you">
                     1.content
                 </Tab.content>
                 <Tab.content id="followings">
                     2.content
                 </Tab.content>
-            </Tab.items>
             </Tab> 
         </>
     )

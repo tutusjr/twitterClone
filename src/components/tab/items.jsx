@@ -1,5 +1,9 @@
+
 export default function Items({children}) {
     return(
-        children
+        <div className="flex items-center">
+            {children}
+        </div>
     )
 }
+

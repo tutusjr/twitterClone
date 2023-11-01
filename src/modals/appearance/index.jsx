@@ -43,12 +43,11 @@ export default function AppreanceModal({ close }) {
             />
             <div className="flex-1 flex flex-col">
               <header className="mb-0.5 leading-5 flex items-center">
-                <div className="leading-5 text-[15px] font-bold flex items-center">
+                <div className="leading-5 font-bold flex items-center">
                   X
                   <svg
                     viewBox="0 0 22 22"
-                    height={18.75}
-                    className="text-[#1d9bf0] ml-0.5"
+                    className="text-[#1d9bf0] ml-0.5 h-[1.172rem]"
                   >
                     <path
                       fill="currentColor"
@@ -162,6 +161,7 @@ export default function AppreanceModal({ close }) {
                 setBackgroundColor({
                   name: "light",
                   primary: "#fff",
+                  primaryAlpha: "#ffffffa6",
                   secondary: "#f7f9f9",
                   third: "#eff3f4",
                   modal: "#00000066",
@@ -212,6 +212,7 @@ export default function AppreanceModal({ close }) {
                 setBackgroundColor({
                   name: "dark",
                   primary: "#15202b",
+                  primaryAlpha: "#15202ba6",
                   secondary: "#1e2732",
                   third: "#263340",
                   modal: "#5b708366",
@@ -262,6 +263,7 @@ export default function AppreanceModal({ close }) {
                 setBackgroundColor({
                   name: "darker",
                   primary: "#000",
+                  primaryAlpha: "#000000a6",
                   secondary: "#16181c",
                   third: "#212327",
                   modal: "#5b708366",
