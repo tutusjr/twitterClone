@@ -1,7 +1,7 @@
 
 import SidebarSection from "../../../../components/siderbar-section";
 import UserCard from "../../../../components/user-card";
-import { WhoFollowUsers } from "../../../../muck";
+import { whoFollowUsers } from "../../../../mock";
 import { useAccount } from "../../../../store/auth/hooks";
 
 export default function WhoFollow() {
@@ -13,7 +13,7 @@ export default function WhoFollow() {
       more={`/connect_people?user_id=${account.id}`}
       className=""
     >
-      {WhoFollowUsers.map(user => <UserCard user={user} key={user.id}/>)}
+      {whoFollowUsers.map(user => <UserCard user={user} key={user.id}/>)}
     </SidebarSection>
   );
 }
