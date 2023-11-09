@@ -2,8 +2,7 @@ export const posts = [
 	{
 		id: '1708632465282150796',
 		type: 'poll',
-		content: `PROTOTURK'un paylaştığı videoları seviyor musunuz?
-Bu anket ders esnasında sorulmuştur.`,
+		content: `Herkese selamlar sirada hangi yazilim dilini ogrenmem gerektigi arasinda sorun yasiyorum. Ankette bana yardimci olursaniz cok sevinirim.`,
 		poll: {
 			voted: false,
 			votes: 12,
@@ -26,9 +25,9 @@ Bu anket ders esnasında sorulmuştur.`,
 			]
 		},
 		account: {
-			avatar: 'https://pbs.twimg.com/profile_images/1200814302820753410/AhAh3xlU_400x400.png',
-			username: 'prototurkcom',
-			fullName: './prototurk'
+			avatar: 'https://pbs.twimg.com/profile_images/1145673666249809921/Gps3Z3Cj_400x400.jpg',
+			username: './tutusbey_',
+			fullName: 'MustafaTutus'
 		},
 		stats: {
 			comments: 43535,
@@ -45,9 +44,9 @@ Bu anket ders esnasında sorulmuştur.`,
 			'https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large'
 		],
 		account: {
-			avatar: 'https://pbs.twimg.com/profile_images/1665642354009677824/LNZo7V8x_400x400.jpg',
-			username: 'tayfunerbilen',
-			fullName: 'Tayfun Erbilen'
+			avatar: 'https://pbs.twimg.com/profile_images/1638668730732277766/FvKwLm6Q_400x400.jpg',
+			username: 'tutusbey_2',
+			fullName: 'Mustafa Tutus'
 		},
 		stats: {
 			comments: 43535,
@@ -137,7 +136,7 @@ Prompt in ALT tag + more examples in thread:`,
 			'https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large',
 		],
 		account: {
-			avatar: 'https://pbs.twimg.com/profile_images/1617700070710992896/pF3T_gMB_400x400.jpg',
+			avatar: 'https://pbs.twimg.com/profile_images/1711152452735774720/Cotttl-n_normal.jpg',
 			username: 'rowancheung',
 			fullName: 'Rowan Cheung',
 			verified: true
