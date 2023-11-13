@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { numberFormat } from "../../utils/format";
+import Photo from "./photo";
 export default function Post({ post }) {
   return (
     <div className="px-2.5 gap-3 py-2 border-b relative border-[color:var(--background-third)] before:transition-colors flex before:absolute before:inset-0 before:hover:bg-[color:var(--background-secondary)] before:opacity-50 before:z-[-1] cursor-pointer">
@@ -37,6 +38,12 @@ export default function Post({ post }) {
         </header>
         <div>
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
+
+          {post.photos && (
+            <Photo photos={post.photos} />
+          )}
+
+
           <div className="flex -ml-1.5 mt-1.5">
             <div className="flex-1">
             <div className=" group inline-flex items-center gap-px">

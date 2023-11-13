@@ -41,7 +41,7 @@ export const posts = [
 		type: 'photo',
 		content: `Toplu günaydın, ben her sabah spora devam ama her gün post atmıyorum artık, max 4 günde bir atarım çünkü en fazla 4 foto paylaşılıyormuş 🤣`,
 		photos: [
-			'https://pbs.twimg.com/media/F7VBIvaW0AIZyiX?format=jpg&name=large'
+			'https://3dduvarkagitlari.com/Content/images/2020/10/16/l/3dduvarkagitlari-837c0423.jpg'
 		],
 		account: {
 			avatar: 'https://pbs.twimg.com/profile_images/1638668730732277766/FvKwLm6Q_400x400.jpg',
@@ -61,7 +61,7 @@ export const posts = [
 		content: `Imagination Land!`,
 		photos: [
 			'https://pbs.twimg.com/media/F7ZIK8KWgAAP8pH?format=jpg&name=900x900',
-			'https://pbs.twimg.com/media/F7VBIvZXEAAIpEM?format=jpg&name=large'
+			'https://imageio.forbes.com/specials-images/imageserve/5e740f3207adf00006db9d14/Coronavirus-meme-featuring-Kanye-West--created-by-meme-account--MasiPopal/960x0.png?format=png&width=960'
 		],
 		account: {
 			avatar: 'https://pbs.twimg.com/profile_images/1683325380441128960/yRsRRjGO_400x400.jpg',
@@ -105,7 +105,7 @@ And people have been busy executing god-like tasks.
 		photos: [
 			'https://pbs.twimg.com/media/F7bpqaKXkAAopDd?format=jpg&name=900x900',
 			'https://pbs.twimg.com/media/F7bptMoXYAA7TpB?format=jpg&name=900x900',
-			'https://pbs.twimg.com/media/F8tfk2JWwAAlY3f?format=jpg&name=large'
+			'https://cdnuploads.aa.com.tr/uploads/Contents/2022/06/05/thumbs_b_c_dc30c9ea6920e3b5c529dd218e78748c.jpg?v=124736'
 		],
 		account: {
 			avatar: 'https://pbs.twimg.com/profile_images/1707827931895017472/1-bUbTT3_400x400.jpg',
@@ -130,10 +130,10 @@ This prompt is going viral- mimicking a creepy iPhone capture that looks insanel
 
 Prompt in ALT tag + more examples in thread:`,
 		photos: [
-			'https://pbs.twimg.com/media/F7aKxHhaAAAnHlS?format=jpg&name=large',
-			'https://pbs.twimg.com/media/F7VBIvaW0AAyXEr?format=jpg&name=large',
-			'https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large',
-			'https://pbs.twimg.com/media/F7VBIvaWAAAWUsx?format=jpg&name=large',
+			'https://i.pinimg.com/736x/15/ac/da/15acda61f8b39c7f706620257b73b552.jpg',
+			'https://i.pinimg.com/736x/63/3c/8f/633c8fda4746bada5884924ec68db937.jpg',
+			'https://imgix.ranker.com/user_node_img/50024/1000474921/original/we-all-know-what-he-s-thinking-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=375',
+			'https://thumbor.bigedition.com/spongebob-squarepants/MksfbrLWQItVgH1zZumT45PNzPQ=/136x207:1511x1238/800x0/filters:quality(80)/granite-web-prod/51/a2/51a2b68ee53c4e97a51b03a8c0433ea4.png',
 		],
 		account: {
 			avatar: 'https://pbs.twimg.com/profile_images/1711152452735774720/Cotttl-n_normal.jpg',
