@@ -20,7 +20,10 @@ export default function MainLayout() {
         document.documentElement.style.setProperty('--background-modal', appearance.backgroundColor.modal)
 
         document.documentElement.style.setProperty('--color-primary', appearance.color.primary)
+<<<<<<< HEAD
         document.documentElement.style.setProperty('--color-primary-alpha', appearance.color.primary  + '12')
+=======
+>>>>>>> cbdf0925f851f9e5f7903cee19ea45ed51a42047
         document.documentElement.style.setProperty('--color-secondary', appearance.color.secondary)
         document.documentElement.style.setProperty('--color-base', appearance.color.base)
         document.documentElement.style.setProperty('--color-base-secondary', appearance.color.baseSecondary)

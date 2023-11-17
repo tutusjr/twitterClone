@@ -34,6 +34,7 @@ export const posts = [
 			repost: 3434,
 			like: 96946,
 			view: 903453
+<<<<<<< HEAD
 		},
 		answers: [
 			{
@@ -52,6 +53,9 @@ export const posts = [
 				votes: 3
 			}
 		]
+=======
+		}
+>>>>>>> cbdf0925f851f9e5f7903cee19ea45ed51a42047
 	},
 	{
 		id: '1708632465282150796',

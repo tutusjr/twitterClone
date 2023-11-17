@@ -13,7 +13,10 @@
     "@headlessui/react": "^1.7.17",
     "@reduxjs/toolkit": "^1.9.7",
     "classnames": "^2.3.2",
+<<<<<<< HEAD
     "pnpm": "^8.10.5",
+=======
+>>>>>>> cbdf0925f851f9e5f7903cee19ea45ed51a42047
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

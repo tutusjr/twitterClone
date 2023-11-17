@@ -1,7 +1,10 @@
 /* eslint-disable react/prop-types */
 import { numberFormat } from "../../utils/format";
 import Photo from "./photo";
+<<<<<<< HEAD
 import Poll from "./poll";
+=======
+>>>>>>> cbdf0925f851f9e5f7903cee19ea45ed51a42047
 export default function Post({ post }) {
   return (
     <div className="px-2.5 gap-3 py-2 border-b relative border-[color:var(--background-third)] before:transition-colors flex before:absolute before:inset-0 before:hover:bg-[color:var(--background-secondary)] before:opacity-50 before:z-[-1] cursor-pointer">
@@ -43,9 +46,12 @@ export default function Post({ post }) {
           {post.photos && (
             <Photo photos={post.photos} />
           )}
+<<<<<<< HEAD
           {post.poll && (
             <Poll poll={post.poll} />
           )}
+=======
+>>>>>>> cbdf0925f851f9e5f7903cee19ea45ed51a42047
 
 
           <div className="flex -ml-1.5 mt-1.5">
