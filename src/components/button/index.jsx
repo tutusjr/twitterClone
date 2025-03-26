@@ -1,9 +1,8 @@
-/* eslint-disable react/prop-types */
+
 import classNames from "classnames";
 import { createElement } from "react";
-import PropTypes from "prop-types";
 
-export default function Button({ as, size, variant, className, children , ... props}) { //children ile tek sefer yaz sonrasinda istedigin yerde kullan.
+export default function Button({ as = 'button', size= 'normal', variant = 'primary', className, children , ... props}) { //children ile tek sefer yaz sonrasinda istedigin yerde kullan.
     return createElement(as, {
         className: classNames( "font-bold flex items-center justify-center rounded-full transition-all", {
             "px-4 h-8 text-sm" : size === 'small',
@@ -16,17 +15,4 @@ export default function Button({ as, size, variant, className, children , ... pr
         }),
         ... props
     }, children)
-}
-
-Button.propTypes = {
-    as: PropTypes.any,
-    size: PropTypes.oneOf(['small','normal','large']),
-    variant: PropTypes.oneOf(['primary','white','white-outline']),
-    props: PropTypes.object,
-    className: PropTypes.string
-}
-Button.defaultProps = {
-    as:'button',
-    size: 'normal',
-    variant:'primary'
 }
